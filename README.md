@@ -1,11 +1,12 @@
 # CodeChallenge_WebDriverIO
 Set up.
-    * run on console
+
+    * run on command promp
     `npm install`
     `npm install -g webdriver-manager`
     `webdriver-manager update`
     `webdriver-manager update --ie`
     `webdriver-manager start`
 
-    * On another console run
+    * On another command promp
     `npm test`

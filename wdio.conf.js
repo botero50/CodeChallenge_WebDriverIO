@@ -3,9 +3,15 @@ exports.config = {
     specs: [
         './test/**/*.js'
     ],
+    splitTestsBetweenCapabilities: true,
+    maxSessions: 30,
     maxInstances: 10,
     capabilities: [{
-        browserName: "firefox",
+        maxInstances: 3,
+        browserName: "firefox"
+    }, {
+        maxInstances: 3,
+        browserName: 'chrome'
     }],
     sync: true,
     logLevel: 'command',
@@ -16,7 +22,6 @@ exports.config = {
     waitforTimeout: 30000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
-    // services: ['selenium-standalone'],
     framework: 'mocha',
     reporters: ['spec'],
     mochaOpts: {
