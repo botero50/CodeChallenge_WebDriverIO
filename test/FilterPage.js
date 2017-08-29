@@ -13,6 +13,7 @@ describe('webdriver.io api page', function() {
         // check out second result
         results[1].click();
         assertion.equal($('.doc h1').getText(),'GETTEXT');
+        console.log('End of script: should be able to filter for commands');
     });
 
     it('should be able to click on get started button and redirect to guide.html', function () {
@@ -24,5 +25,6 @@ describe('webdriver.io api page', function() {
             return link.isVisible();
         });
         assertion.equal("count of folders =" + results.length,"count of folders =" + 7);
+        console.log('should be able to click on get started button and redirect to guide.html');
     });
 });

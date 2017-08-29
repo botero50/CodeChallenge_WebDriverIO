@@ -1,5 +1,9 @@
+var CustomReporter = require('./reporter/my.custom.reporter');
 exports.config = {
-    
+    reporters: [CustomReporter],
+    reporterOptions: {
+        outputDir: './'
+    },
     specs: [
         './test/**/*.js'
     ],
@@ -28,4 +32,13 @@ exports.config = {
         ui: 'bdd',
         timeout: 30000,
     },
+    /**
+     * hooks
+     */
+    onPrepare: function() {
+        console.log('Starting Scripts');
+    },
+    onComplete: function() {
+        console.log('Done');
+    }
 }
